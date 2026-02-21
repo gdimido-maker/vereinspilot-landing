@@ -106,13 +106,14 @@
 
     /* ── SCREENSHOTS SHOWCASE ── */
     .screenshots { padding: 80px 0; background: white; }
-    .screenshots-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start; }
+    .screenshots-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px; align-items: start; }
     .screenshot-item { position: relative; }
     .screenshot-item .mockup { border-radius: 16px; box-shadow: 0 20px 50px rgba(0,0,0,0.12); border: 1px solid var(--gray-200); background: var(--gray-100); overflow: hidden; transition: transform 0.4s ease, box-shadow 0.4s ease; cursor: zoom-in; }
     .screenshot-item .mockup:hover { transform: scale(1.04); box-shadow: 0 30px 70px rgba(0,0,0,0.2); }
     .screenshot-item .mockup img { width: 100%; display: block; }
     .screenshot-label { text-align: center; margin-top: 16px; font-size: 0.95rem; font-weight: 600; color: var(--gray-700); }
     .screenshot-label span { font-weight: 400; color: var(--gray-500); }
+    @media (max-width: 1024px) { .screenshots-grid { grid-template-columns: 1fr 1fr; } }
     @media (max-width: 768px) { .screenshots-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; } }
 
     /* ── LIGHTBOX ── */
@@ -375,7 +376,7 @@
       </div>
       <div class="hero-visual">
         <div class="mockup" onclick="openLightbox(this.querySelector('img'))">
-          <img src="mitglieder.png" alt="VereinsPilot Mitgliederverwaltung — Mitgliederliste mit Status, Rollen und Aktionen" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
+          <img src="mitglieder.webp" alt="VereinsPilot Mitgliederverwaltung — Mitgliederliste mit Status, Rollen und Aktionen" style="width: 100%; height: 100%; object-fit: cover; border-radius: 16px;">
         </div>
       </div>
     </div>
@@ -460,15 +461,39 @@
     <div class="screenshots-grid fade-up">
       <div class="screenshot-item">
         <div class="mockup" onclick="openLightbox(this.querySelector('img'))">
-          <img src="mitglieder.png" alt="VereinsPilot Mitgliederverwaltung">
+          <img src="mitglieder.webp" alt="VereinsPilot Mitgliederverwaltung">
         </div>
-        <p class="screenshot-label">Mitgliederverwaltung <span>— Alle Mitglieder auf einen Blick</span></p>
+        <p class="screenshot-label">Mitgliederverwaltung <span>— Alle Mitglieder auf einen Blick mit Suche, Statusfilter, Import, Export und PDF-Druck</span></p>
       </div>
       <div class="screenshot-item">
         <div class="mockup" onclick="openLightbox(this.querySelector('img'))">
-          <img src="gruppen_abteilungen.png" alt="VereinsPilot Gruppen und Abteilungen">
+          <img src="3_gruppen.webp" alt="VereinsPilot Gruppen und Abteilungen">
         </div>
-        <p class="screenshot-label">Gruppen &amp; Abteilungen <span>— Fussball, Handball, Volleyball &amp; mehr</span></p>
+        <p class="screenshot-label">Gruppen &amp; Abteilungen <span>— Mannschaften und Abteilungen anlegen, z.&nbsp;B. Herren, Damen und Jugend</span></p>
+      </div>
+      <div class="screenshot-item">
+        <div class="mockup" onclick="openLightbox(this.querySelector('img'))">
+          <img src="beitragsverwaltung1.webp" alt="VereinsPilot Beitragsverwaltung">
+        </div>
+        <p class="screenshot-label">Beitragsverwaltung <span>— Beitragskategorien mit Betrag, Intervall und Altersgrenzen definieren</span></p>
+      </div>
+      <div class="screenshot-item">
+        <div class="mockup" onclick="openLightbox(this.querySelector('img'))">
+          <img src="kalender.webp" alt="VereinsPilot Kalender mit Terminplanung">
+        </div>
+        <p class="screenshot-label">Kalender <span>— Termine im Monats-, Wochen- oder Tagesansicht planen, mit Wiederholung und Gruppenzuweisung</span></p>
+      </div>
+      <div class="screenshot-item">
+        <div class="mockup" onclick="openLightbox(this.querySelector('img'))">
+          <img src="nachrichten.webp" alt="VereinsPilot Nachrichten an Gruppen senden">
+        </div>
+        <p class="screenshot-label">Nachrichten <span>— Ankündigungen und Infos gezielt an einzelne Gruppen oder den ganzen Verein senden</span></p>
+      </div>
+      <div class="screenshot-item">
+        <div class="mockup" onclick="openLightbox(this.querySelector('img'))">
+          <img src="einstellungen.webp" alt="VereinsPilot Einstellungen">
+        </div>
+        <p class="screenshot-label">Einstellungen <span>— Vereinsprofil, Darstellung, Geschäftsjahr, steuerliche Kategorien und Backup an einem Ort</span></p>
       </div>
     </div>
   </div>
